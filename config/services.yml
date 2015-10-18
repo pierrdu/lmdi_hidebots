@@ -1,5 +1,5 @@
 services:
-    lmdi.hidebots.listener:
+    lmdi.delre.listener:
         class: lmdi\hidebots\event\listener
         arguments:
             - @controller.helper
