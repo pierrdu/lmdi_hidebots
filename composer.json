@@ -3,7 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Hides robots in the Who is on line",
 	"homepage": "http://www.insecte.org/ext/readme.txt",
-	"version": "1.0.0",
+	"version": "1.0.1",
+	"time": "2015-12-30",
 	"license": "GPL-2.0",
 	"authors": [
 		{
@@ -20,7 +21,7 @@
 	"extra": {
 		"display-name": "LMDI Hide Robots",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.4"
+			"phpbb/phpbb": ">=3.1.4,<3.1.7"
 		}
 	}
 }
