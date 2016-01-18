@@ -44,18 +44,31 @@ class listener implements EventSubscriberInterface
 		);
 	}
 
+	function get_robots_group ()
+	{
+		global $table_prefix, $db;
+		$sql = "SELECT group_id from ${table_prefix}groups where group_name = 'BOTS'";
+		$result = $db->sql_query($sql);
+		$row = $db->sql_fetchrow($result);
+		$code = $row['group_id'];
+		return ((int)$code);
+	}
+	
 	public function hide_bots ($event)
 	{
 		if (version_compare ($this->config['version'], '3.1.7', '>='))
 		{
 			$sql_ary = $event['sql_ary'];
 			// var_dump ($sql_ary);
-			$where = 'u.group_id <> 6';
-			$sql_ary['WHERE'] = $where;
-			// var_dump ($where);
-			$event['sql'] = $sql_ary;
+			$code = $this->get_robots_group ();
+			// var_dump ($code);
+			$where = " AND u.group_id <> $code ";
+			// $where = ' AND u.user_type <> ' . USER_IGNORE . ' ';
+			$sql_ary['WHERE'] .= $where;
+			// var_dump ($sql_ary);
+			$event['sql_ary'] = $sql_ary;
 		}
-		else		// 3.1.4 and higher
+		else		// > 3.1.4 and < 3.1.7
 		{
 			$sql = $event['sql'];
 			// var_dump ($sql);

@@ -1,10 +1,10 @@
 {
 	"name": "lmdi/hidebots",
 	"type": "phpbb-extension",
-	"description": "Hides robots in the Who is on line",
+	"description": "Hides robots in the Who is online line",
 	"homepage": "http://www.insecte.org/ext/readme.txt",
-	"version": "1.0.1",
-	"time": "2015-12-30",
+	"version": "1.0.2",
+	"time": "2016-01-18",
 	"license": "GPL-2.0",
 	"authors": [
 		{
@@ -21,7 +21,7 @@
 	"extra": {
 		"display-name": "LMDI Hide Robots",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.4,<3.1.7"
+			"phpbb/phpbb": ">=3.1.4,<3.2.0"
 		}
 	}
 }
