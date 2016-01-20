@@ -26,9 +26,6 @@ class listener implements EventSubscriberInterface
 	/**
 	* Constructor
 	*
-	* @param \phpbb\controller\helper			$helper	Controller helper object
-	* @param \phpbb\template					$template	Template object
-	* @param \phpbb\db\driver\driver_interface 	$db
 	*/
 	public function __construct (
 		\phpbb\config\config $config
@@ -59,23 +56,17 @@ class listener implements EventSubscriberInterface
 		if (version_compare ($this->config['version'], '3.1.7', '>='))
 		{
 			$sql_ary = $event['sql_ary'];
-			// var_dump ($sql_ary);
 			$code = $this->get_robots_group ();
-			// var_dump ($code);
 			$where = " AND u.group_id <> $code ";
-			// $where = ' AND u.user_type <> ' . USER_IGNORE . ' ';
 			$sql_ary['WHERE'] .= $where;
-			// var_dump ($sql_ary);
 			$event['sql_ary'] = $sql_ary;
 		}
 		else		// > 3.1.4 and < 3.1.7
 		{
 			$sql = $event['sql'];
-			// var_dump ($sql);
 			$search = "ORDER BY username_clean ASC";
 			$replace = "AND user_type <> " . USER_IGNORE . " ORDER BY username_clean ASC";
 			$sql = str_replace ($search, $replace, $sql);
-			// var_dump ($sql);
 			$event['sql'] = $sql;
 		}
 	}
