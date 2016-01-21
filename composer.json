@@ -3,8 +3,8 @@
 	"type": "phpbb-extension",
 	"description": "Hides robots in the Who is online line",
 	"homepage": "http://www.insecte.org/ext/readme.txt",
-	"version": "1.0.3",
-	"time": "2016-01-20",
+	"version": "1.0.4",
+	"time": "2016-01-21",
 	"license": "GPL-2.0",
 	"authors": [
 		{

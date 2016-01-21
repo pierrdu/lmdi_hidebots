@@ -61,7 +61,7 @@ class listener implements EventSubscriberInterface
 			$sql_ary['WHERE'] .= $where;
 			$event['sql_ary'] = $sql_ary;
 		}
-		else		// > 3.1.4 and < 3.1.7
+		else		// >= 3.1.4 and < 3.1.7
 		{
 			$sql = $event['sql'];
 			$search = "ORDER BY username_clean ASC";
