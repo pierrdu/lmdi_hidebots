@@ -2,8 +2,6 @@ services:
     lmdi.hidebots.listener:
         class: lmdi\hidebots\event\listener
         arguments:
-            - @controller.helper
-            - @template
-            - @dbal.conn
+            - '@config'
         tags:
             - { name: event.listener }
