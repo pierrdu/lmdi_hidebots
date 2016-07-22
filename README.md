@@ -5,7 +5,7 @@
 1. Download the latest release.
 2. Unzip the downloaded release, and change the name of the folder to `hidebots`.
 3. In the `ext` directory of your phpBB board, create a new directory named `lmdi` (if it does not already exist).
-4. Copy the `hidebots` folder to `phpBB/ext/lmdi/` (if done correctly, you'll have the main extension class at (your forum root)/ext/lmdi/hidebots/composer.json).
+4. Copy the `hidebots` folder to `/ext/lmdi/`.
 5. Navigate in the ACP to `Customise -> Manage extensions`.
 6. Look for `LMDI Hide Robots` under the Disabled Extensions list, and click its `Enable` link.
 
