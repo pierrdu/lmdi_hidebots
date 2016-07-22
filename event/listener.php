@@ -48,9 +48,9 @@ class listener implements EventSubscriberInterface
 		$result = $db->sql_query($sql);
 		$row = $db->sql_fetchrow($result);
 		$code = $row['group_id'];
-		return ((int)$code);
+		return ((int) $code);
 	}
-	
+
 	public function hide_bots ($event)
 	{
 		if (version_compare ($this->config['version'], '3.1.7', '>='))
@@ -72,4 +72,3 @@ class listener implements EventSubscriberInterface
 	}
 
 }
-
