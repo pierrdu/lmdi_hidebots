@@ -2,15 +2,15 @@
 	"name": "lmdi/hidebots",
 	"type": "phpbb-extension",
 	"description": "Hides robots in the Who is online line",
-	"homepage": "http://www.insecte.org/ext/readme.txt",
-	"version": "1.0.6",
-	"time": "2016-07-22",
-	"license": "GPL-2.0",
+	"homepage": "https://www.insecte.org/ext/readme.txt",
+	"version": "1.0.2",
+	"time": "2022-11-30",
+	"license": "GPL-2.0-only",
 	"authors": [
 		{
 		"name": "Pierre Duhem",
 		"email": "pierre@duhem.com",
-		"homepage": "http://www.insecte.org/ext/readme.txt",
+		"homepage": "https://www.insecte.org/ext/readme.txt",
 		"role": "Extension Developer"
 		}
 	],
